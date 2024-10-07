@@ -11,6 +11,10 @@ public class WordCountResult {
         map.compute(word, (k, v) -> v == null ? 1 : v + 1);
     }
 
+    public int getCount(String word) {
+        return map.getOrDefault(word, 0);
+    }
+
     public String toString() {
         return map.toString();
     }
