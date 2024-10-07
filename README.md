@@ -1,6 +1,10 @@
 This project uses Apache Camel to read data from Kafka topic
 and aggregates (counts) the number of words.
 
+Kafka has its own aggregation implementation while streaming,
+but Camel doesn't support that mechanism at the time being, until
+the Camel Kafka connector becomes available.
+
 ### Setup:
 * docker pull apache/kafka:3.8.0
 * docker run -d -p 9092:9092 apache/kafka:3.8.0
